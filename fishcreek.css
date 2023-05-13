@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5280C5;
+    color: #003366;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #000066;
+    color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(lilfish.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 2em;
+    padding: .2em;
+    text-shadow: #CCCCCC;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px #777;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #000066;
+    background-color: transparent;
+}
+
+nav a:visited {
+    color:#5280C5;
+    background-color: transparent;
+}
+
+nav a:hover {
+    color: #3262A3;
+    background-color: transparent;
+}
+
+dt {
+    color: #5280C5;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.category {
+    font-weight: 700;
+    color: #5380C5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    font-size: 0.70em;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: .5em;
+    background-color: #AEC3E3;
+}
+
+#wrapper {
+    background-color: #F0F0F0;
+}
+
+main {
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: white;
+    border: 1px solid #AEC3E3;
+    overflow: auto;
+    display: block;
+}
+
+footer {
+    padding: 1em;
+}
+
+.address {
+    clear: left;
+}
+
+section {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0;
+    background-color: #EAEAEA;
+}
+
+section h3 {
+    padding: .25em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 110%;
+    background-color: #AEC3E3;
+}
+
+section p {
+    padding: 0 .25em .25em .25em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link {
+    color: #F0F0F0;
+    background-color: transparent;
+}
+
+header a:visited {
+    color: #F0F0F0;
+    background-color: transparent;
+}
+
+header a:hover {
+    color: #AEC3E3;
+    background-color: transparent;
+}
+
+.floatright {
+    float: right;
+}
+
+nav li {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+table {
+    margin: 1em;
+    border: solid 2px darkblue;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: .5em;
+    border: solid 1px darkblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: .5em;
+}
+
+.shop {
+    border: 1px solid #AEC3E3;
+    background-color: white;
+}
+
+.shop img {
+    float: right;
+}
+
+.shop form {
+    clear: right;
+}
+
+@media (min-width: 600px) {
+
+    header {
+        background-image: url(bigfish.gif);
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section {
+        min-width: 30%;
+        flex: 1;
+    }
+
+    dl {
+        flex: 2;
+    }
+
+    img {
+        flex: 1;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: inline;
+    }
+
+    form {
+        width: 40%;
+        display: grid;
+        grid-gap: 1em;
+        gap: 1em;
+        grid-template-rows: auto;
+        grid-template-columns: 6em 1fr;
+    }
+
+    input[type="submit"] {
+        grid-column: 2/3;
+        width: 9em;
+    }
+
+    label {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+     header {
+        grid-area: header;
+     }
+
+     nav {
+        grid-area: nav;
+     }
+
+     main {
+        grid-area: main;
+     }
+
+     footer {
+        grid-area: footer;
+     }
+
+     #wrapper {
+        display: grid;
+        grid-template:
+        "header header"
+        "nav main"
+        "nav footer"
+        / 180px;
+     }
+
+     nav ul {
+        flex-direction: column;
+        font-size: 1.25em;
+        font-weight: bold;
+     }
+}

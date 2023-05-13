@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Fish Creek Animal Clinic</title>
+    <meta name="description" content="fish creek ask the vet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fishcreek.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Fish Creek Animal Clinic</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_self">Home</a></li>
+                <li><a href="services.html" target="_self">Services</a></li>
+                <li><a href="askvet.html" target="_self">Ask The Vet</a></li>
+                <li><a href="contact.html" target="_self">Contact</a></li>
+                <li><a href="shop.html" target="_self">Shop</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Contact Fish Creek</h2>
+            <p>Fill out the form below to contact Fish Creek. All information is required.</p>
+
+            <form method="post" action="https://webdevbasics.net/scripts/fishcreek.php">
+                <label for="myName">Name:</label>
+                <input type="text" id="myName" required>
+                <label for="myEmail">E-mail:</label>
+                <input placeholder="example@example.com" type=email" id="myEmail"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                    required>
+                <label for="myReason">Reason for Contact:</label>
+                <input type="text" list="myReason" name="myReason" required>
+                <datalist id="myReason">
+                    <option value="New Patient">
+                    <option value="Appointment">
+                    <option value="House Call">
+                    <option value="Information">
+                    <option value="Ask the Vet">
+                </datalist>
+                <label for="myComments">Comments:</label>
+                <textarea rows="2" cols="20" id="myComments" placeholder="Put comments here..." required></textarea>
+                <input type="submit" value="Send Now" id="mySubmit">
+            </form>
+        </main>
+
+        <footer>
+            Copyright © 2020 Fish Creek Animal Clinic
+            <br>
+            <a href="mailto:alexander_asbill@stu.centralaz.edu">alexander_asbill@stu.centralaz.edu</a>
+        </footer>
+    </div>
+</body>
+
+</html>
